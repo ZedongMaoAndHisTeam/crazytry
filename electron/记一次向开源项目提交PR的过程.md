@@ -5,10 +5,8 @@ categories: "Notes"
 tags:
      - 开源
      - 成长之路
-comments: true
+Author: LuoLiangDSGA
 ---
-
-> Author: LuoLiangDSGA  
 
 > 最近在做Electron+Vue的项目，这里用到了[这个项目](https://github.com/PanJiaChen/electron-vue-admin)作为脚手架。然而，在准备打包生产环境配置，用于发布第一个正式版本的时候，发现把`process.env.NODE_ENV`设置为production并不能切换为生产环境的配置。
 
