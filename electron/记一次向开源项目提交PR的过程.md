@@ -5,10 +5,10 @@ categories: "Notes"
 tags:
      - 开源
      - 成长之路
-comments: true
+Author: LuoLiangDSGA
 ---
 
-> 最近在做Electron+Vue的项目，这里用到了[这个项目](https://github.com/PanJiaChen/electron-vue-admin)作为脚手架。然而，在准备打包生产环境配置，用于发布第一个正式版本的时候，发现把`process.env.NODE_ENV`设置为production并不能切换为生产环境的配置。
+> 最近在做Electron+Vue的项目，这里用到了[这个项目](https://github.com/PanJiaChen/electron-vue-admin)作为脚手架。然而，在准备打包生产环境配置，用于发布第一个正式版本的时候，发现把`process.env.NODE_ENV`设置为production并不能切换为生产环境的配置。
 
 #### 原因
 经排查，发现问题的原因是因为配置文件中Webpack的DefinePlugin插件把配置写死为开发环境了。
@@ -19,7 +19,7 @@ comments: true
 ```javascript
 'process.env': process.env.NODE_ENV === 'production' ? config.build.env : config.dev.env`。
 ```
-**上Github看了项目主干最新代码，发现此问题并没有修复，本着同性交友的原则，我准备提交我的第一个PR。**
+**上Github看了项目主干最新代码，发现此问题并没有修复，本着同性交友的原则，我准备提交我的第一个PR。**
 <!-- more -->
 
 #### 步骤
@@ -90,7 +90,7 @@ $ git push --set-upstream origin electron-vue-admin-fixbug
 
 ![](https://ws3.sinaimg.cn/large/006tNbRwgy1fun2f9eszvj30s807e0ty.jpg)
 
-写好名字和说明提交即可，PR提交后，项目拥有者会进行判断，选择是否合进主干。我提交PR的项目响应非常快，几个小时便合进了主干，如下：
+写好名字和说明提交即可，PR提交后，项目拥有者会进行判断，选择是否合进主干。我提交PR的项目响应非常快，几个小时便合进了主干，如下：
 
 ![](https://ws4.sinaimg.cn/large/006tNbRwgy1fun2lne59xj31kw107dqu.jpg)
 
