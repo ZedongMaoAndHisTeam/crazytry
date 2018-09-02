@@ -13,7 +13,7 @@ const set = new Set([iterable])
 ```
 其中`iterable`是一个可迭代对象，里面的所有元素都会添加到Set中。null被看作undefined，也可以不传入`iterable`，通过它的`add()`方法来添加元素。
 
-其实ES6的Set和Java中的Set集合基本思想都是一样的。
+其实ES6的Set和Java中的Set集合基本思想都是一样的。
 
 #### 属性
 - Set.prototype.size:返回Set实例的成员数量。
@@ -32,7 +32,7 @@ const set = new Set([iterable])
 #### 栗子
 js数组是没有remove这个方法的。当我们需要从一个数组里面移除一个特定的元素时，我们通常会怎么写？
 
-在ES6之前，是这样的，写一个remove function
+在ES6之前，是这样的，写一个remove function
 ```javascript
 function remove(array, element) {
     const index = array.indexOf(element);
