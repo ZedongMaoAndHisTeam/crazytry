@@ -18,5 +18,6 @@ add: function (e) {
     }
 ```
 [在线预览](http://jsbin.com/xotonac/edit?html,output)
+
 与add()方法绑定的是一个Button,如果将e.preventDefault()方法移除会发现add()方法失效，原因是：
-> `<form>`下第一个没有明确type的`<button>`元素默认为submit,`<form>`的submit会刷新页面。
+> `<form>`下第一个没有明确type的`<button>`元素默认为submit,`<form>`的submit会刷新页面.
