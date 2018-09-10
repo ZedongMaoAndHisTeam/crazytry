@@ -145,3 +145,11 @@ intersect;// [2, 3]
 
 
 
+curl 'https://oapi.dingtalk.com/robot/send?access_token=b056c419576a7f1387e687309f02ffe27f4e07cd168a3f21bac7bf21f9f33b4e' \
+   -H 'Content-Type: application/json' \
+   -d '
+  {"msgtype": "text",
+    "text": {
+        "content": "第一次提醒，写总结"
+     }
+  }'
