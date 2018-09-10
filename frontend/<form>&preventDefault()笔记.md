@@ -5,6 +5,7 @@ categories: "Notes"
 Author: 李赛飞
 ---
 Vue官方demo里的SVGTable,有一段代码：
+
 ```javascript
 add: function (e) {
       // 为什么preventDefault()是必需的？
@@ -17,6 +18,7 @@ add: function (e) {
       this.newLabel = ''
     }
 ```
+
 [在线预览](http://jsbin.com/xotonac/edit?html,output)
 
 与add()方法绑定的是一个Button,如果将e.preventDefault()方法移除会发现add()方法失效，原因是：
