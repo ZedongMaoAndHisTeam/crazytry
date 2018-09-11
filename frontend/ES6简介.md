@@ -494,7 +494,73 @@ class Point {
 - 语法简单，类似CommonJS,一个文件一个模块
 - 异步模块加载，同AMD。
 
+#### ES5的模块化实现
+
+##### 模块化要素
+
+1.隐藏模块内部细节
+2.定义模块接口
+
+```javascript
+const MouseCounterModule = function() {
+  let numClicks = 0;
+  const handleClick = () => {
+    alert(++numClicks);
+  };
+
+  return {
+    countClicks: () => {
+      document.addEventListener("click", handleClick);
+    }
+  };
+}();  // 立即函数
+```
+
+#### ES6 模块化
+
 关键字： `export`和`import`
+
+```javascript
+// profile.js
+var firstName = 'Michael';
+var lastName = 'Jackson';
+var year = 1958;
+
+export {firstName, lastName, year};
+```
+
+```javascript
+// main.js
+import {firstName, lastName, year} from './profile.js';
+
+function setName(element) {
+  element.textContent = firstName + ' ' + lastName;
+}
+```
+
+##### export default
+
+export default命令用于指定模块的默认输出。显然，一个模块只能有一个默认输出，因此export default命令只能使用一次。所以，import命令后面才不用加大括号，因为只可能唯一对应export default命令。
+
+本质上，export default就是输出一个叫做default的变量或方法，然后系统允许你为它取任意名字。所以，下面的写法是有效的。
+
+```javascript
+// modules.js
+function add(x, y) {
+  return x * y;
+}
+export {add as default};
+// 等同于
+// export default add;
+
+// app.js
+import { default as foo } from 'modules';
+// 等同于
+// import foo from 'modules';
+```
+
+-----
+-----
 
 > **参考资料**
 > [阮一峰-ES6入门](http://es6.ruanyifeng.com/)
