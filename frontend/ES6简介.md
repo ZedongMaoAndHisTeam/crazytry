@@ -403,6 +403,13 @@ delay(1000)
     });
 ```
 
+#### Difference between callbacks and Promise
+
+1.Callbacks是函数，Promise是对象。
+2.Callbacks作为参数被传递，而Promise被返回。
+3.Callbacks处理成功和失败，Promise不处理任何事。
+4.Callbacks可被多次调用，Promise只能代表一个事件。
+
 ### Block-Scoped Constructs Let and Const
 
 我们使用花括号定义代码块，在ES5中，`var`声明的变量都是全局的，块级作用域没任何作用。`let` 的作用和 `var` 相似，不同在于`let`把变量的作用域限定在块级。
