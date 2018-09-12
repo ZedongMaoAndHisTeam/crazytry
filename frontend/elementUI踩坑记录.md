@@ -9,6 +9,6 @@ Author: 李赛飞
 
 ## 1.带输入建议的输入框`el-autocomplete`
 
-`el-autocomplete`是一个可带输入建议的输入框组件。[官方示例](http://element-cn.eleme.io/#/zh-CN/component/input)
+`el-autocomplete`是一个可带输入建议的输入框组件。我们可以用来实现带搜索建议的输入框。[官方示例](http://element-cn.eleme.io/#/zh-CN/component/input)
 
 使用时，在显示建议数据的时候要注意，数据接口的属性名必须要为`value`,否则无法显示数据。
